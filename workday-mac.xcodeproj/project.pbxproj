@@ -1,0 +1,836 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6DDB39D929592EB2002A8967 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDB39D829592EB2002A8967 /* AppDelegate.swift */; };
+		6DDB39DD29592EB2002A8967 /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = 6DDB39DB29592EB2002A8967 /* Main.html */; };
+		6DDB39DF29592EB2002A8967 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DDB39DE29592EB2002A8967 /* Icon.png */; };
+		6DDB39E129592EB2002A8967 /* Style.css in Resources */ = {isa = PBXBuildFile; fileRef = 6DDB39E029592EB2002A8967 /* Style.css */; };
+		6DDB39E329592EB2002A8967 /* Script.js in Resources */ = {isa = PBXBuildFile; fileRef = 6DDB39E229592EB2002A8967 /* Script.js */; };
+		6DDB39E529592EB2002A8967 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDB39E429592EB2002A8967 /* ViewController.swift */; };
+		6DDB39E829592EB2002A8967 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6DDB39E629592EB2002A8967 /* Main.storyboard */; };
+		6DDB39EA29592EB3002A8967 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DDB39E929592EB3002A8967 /* Assets.xcassets */; };
+		6DDB39F629592EB3002A8967 /* workday_macTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDB39F529592EB3002A8967 /* workday_macTests.swift */; };
+		6DDB3A0029592EB3002A8967 /* workday_macUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDB39FF29592EB3002A8967 /* workday_macUITests.swift */; };
+		6DDB3A0229592EB3002A8967 /* workday_macUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDB3A0129592EB3002A8967 /* workday_macUITestsLaunchTests.swift */; };
+		6DDB3A0829592EB3002A8967 /* workday-mac Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 6DDB3A0729592EB3002A8967 /* workday-mac Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6DDB3A0D29592EB3002A8967 /* SafariWebExtensionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDB3A0C29592EB3002A8967 /* SafariWebExtensionHandler.swift */; };
+		6DDB3A1029592EB3002A8967 /* _locales in Resources */ = {isa = PBXBuildFile; fileRef = 6DDB3A0F29592EB3002A8967 /* _locales */; };
+		6DDB3A1229592EB3002A8967 /* images in Resources */ = {isa = PBXBuildFile; fileRef = 6DDB3A1129592EB3002A8967 /* images */; };
+		6DDB3A1429592EB3002A8967 /* manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 6DDB3A1329592EB3002A8967 /* manifest.json */; };
+		6DDB3A1629592EB3002A8967 /* background.js in Resources */ = {isa = PBXBuildFile; fileRef = 6DDB3A1529592EB3002A8967 /* background.js */; };
+		6DDB3A1829592EB3002A8967 /* content.js in Resources */ = {isa = PBXBuildFile; fileRef = 6DDB3A1729592EB3002A8967 /* content.js */; };
+		6DDB3A1A29592EB3002A8967 /* popup.html in Resources */ = {isa = PBXBuildFile; fileRef = 6DDB3A1929592EB3002A8967 /* popup.html */; };
+		6DDB3A1C29592EB3002A8967 /* popup.css in Resources */ = {isa = PBXBuildFile; fileRef = 6DDB3A1B29592EB3002A8967 /* popup.css */; };
+		6DDB3A1E29592EB3002A8967 /* popup.js in Resources */ = {isa = PBXBuildFile; fileRef = 6DDB3A1D29592EB3002A8967 /* popup.js */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6DDB39F229592EB3002A8967 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6DDB39CD29592EB2002A8967 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6DDB39D429592EB2002A8967;
+			remoteInfo = "workday-mac";
+		};
+		6DDB39FC29592EB3002A8967 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6DDB39CD29592EB2002A8967 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6DDB39D429592EB2002A8967;
+			remoteInfo = "workday-mac";
+		};
+		6DDB3A0929592EB3002A8967 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6DDB39CD29592EB2002A8967 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6DDB3A0629592EB3002A8967;
+			remoteInfo = "workday-mac Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6DDB3A2629592EB3002A8967 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				6DDB3A0829592EB3002A8967 /* workday-mac Extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		6DDB39D529592EB2002A8967 /* workday-mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "workday-mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DDB39D829592EB2002A8967 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6DDB39DC29592EB2002A8967 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = ../Base.lproj/Main.html; sourceTree = "<group>"; };
+		6DDB39DE29592EB2002A8967 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		6DDB39E029592EB2002A8967 /* Style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = Style.css; sourceTree = "<group>"; };
+		6DDB39E229592EB2002A8967 /* Script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = Script.js; sourceTree = "<group>"; };
+		6DDB39E429592EB2002A8967 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6DDB39E729592EB2002A8967 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6DDB39E929592EB3002A8967 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6DDB39EB29592EB3002A8967 /* workday_mac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = workday_mac.entitlements; sourceTree = "<group>"; };
+		6DDB39EC29592EB3002A8967 /* workday-mac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "workday-mac.entitlements"; sourceTree = "<group>"; };
+		6DDB39F129592EB3002A8967 /* workday-macTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "workday-macTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DDB39F529592EB3002A8967 /* workday_macTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = workday_macTests.swift; sourceTree = "<group>"; };
+		6DDB39FB29592EB3002A8967 /* workday-macUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "workday-macUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DDB39FF29592EB3002A8967 /* workday_macUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = workday_macUITests.swift; sourceTree = "<group>"; };
+		6DDB3A0129592EB3002A8967 /* workday_macUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = workday_macUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6DDB3A0729592EB3002A8967 /* workday-mac Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "workday-mac Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DDB3A0C29592EB3002A8967 /* SafariWebExtensionHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariWebExtensionHandler.swift; sourceTree = "<group>"; };
+		6DDB3A0F29592EB3002A8967 /* _locales */ = {isa = PBXFileReference; lastKnownFileType = folder; path = _locales; sourceTree = "<group>"; };
+		6DDB3A1129592EB3002A8967 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = images; sourceTree = "<group>"; };
+		6DDB3A1329592EB3002A8967 /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = manifest.json; sourceTree = "<group>"; };
+		6DDB3A1529592EB3002A8967 /* background.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = background.js; sourceTree = "<group>"; };
+		6DDB3A1729592EB3002A8967 /* content.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = content.js; sourceTree = "<group>"; };
+		6DDB3A1929592EB3002A8967 /* popup.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = popup.html; sourceTree = "<group>"; };
+		6DDB3A1B29592EB3002A8967 /* popup.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = popup.css; sourceTree = "<group>"; };
+		6DDB3A1D29592EB3002A8967 /* popup.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = popup.js; sourceTree = "<group>"; };
+		6DDB3A1F29592EB3002A8967 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6DDB3A2029592EB3002A8967 /* workday_mac_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = workday_mac_Extension.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6DDB39D229592EB2002A8967 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6DDB39EE29592EB3002A8967 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6DDB39F829592EB3002A8967 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6DDB3A0429592EB3002A8967 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6DDB39CC29592EB2002A8967 = {
+			isa = PBXGroup;
+			children = (
+				6DDB39D729592EB2002A8967 /* workday-mac */,
+				6DDB39F429592EB3002A8967 /* workday-macTests */,
+				6DDB39FE29592EB3002A8967 /* workday-macUITests */,
+				6DDB3A0B29592EB3002A8967 /* workday-mac Extension */,
+				6DDB39D629592EB2002A8967 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6DDB39D629592EB2002A8967 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6DDB39D529592EB2002A8967 /* workday-mac.app */,
+				6DDB39F129592EB3002A8967 /* workday-macTests.xctest */,
+				6DDB39FB29592EB3002A8967 /* workday-macUITests.xctest */,
+				6DDB3A0729592EB3002A8967 /* workday-mac Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6DDB39D729592EB2002A8967 /* workday-mac */ = {
+			isa = PBXGroup;
+			children = (
+				6DDB39D829592EB2002A8967 /* AppDelegate.swift */,
+				6DDB39E429592EB2002A8967 /* ViewController.swift */,
+				6DDB39E629592EB2002A8967 /* Main.storyboard */,
+				6DDB39E929592EB3002A8967 /* Assets.xcassets */,
+				6DDB39EB29592EB3002A8967 /* workday_mac.entitlements */,
+				6DDB39EC29592EB3002A8967 /* workday-mac.entitlements */,
+				6DDB39DA29592EB2002A8967 /* Resources */,
+			);
+			path = "workday-mac";
+			sourceTree = "<group>";
+		};
+		6DDB39DA29592EB2002A8967 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6DDB39DB29592EB2002A8967 /* Main.html */,
+				6DDB39DE29592EB2002A8967 /* Icon.png */,
+				6DDB39E029592EB2002A8967 /* Style.css */,
+				6DDB39E229592EB2002A8967 /* Script.js */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		6DDB39F429592EB3002A8967 /* workday-macTests */ = {
+			isa = PBXGroup;
+			children = (
+				6DDB39F529592EB3002A8967 /* workday_macTests.swift */,
+			);
+			path = "workday-macTests";
+			sourceTree = "<group>";
+		};
+		6DDB39FE29592EB3002A8967 /* workday-macUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6DDB39FF29592EB3002A8967 /* workday_macUITests.swift */,
+				6DDB3A0129592EB3002A8967 /* workday_macUITestsLaunchTests.swift */,
+			);
+			path = "workday-macUITests";
+			sourceTree = "<group>";
+		};
+		6DDB3A0B29592EB3002A8967 /* workday-mac Extension */ = {
+			isa = PBXGroup;
+			children = (
+				6DDB3A0C29592EB3002A8967 /* SafariWebExtensionHandler.swift */,
+				6DDB3A1F29592EB3002A8967 /* Info.plist */,
+				6DDB3A2029592EB3002A8967 /* workday_mac_Extension.entitlements */,
+				6DDB3A0E29592EB3002A8967 /* Resources */,
+			);
+			path = "workday-mac Extension";
+			sourceTree = "<group>";
+		};
+		6DDB3A0E29592EB3002A8967 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6DDB3A0F29592EB3002A8967 /* _locales */,
+				6DDB3A1129592EB3002A8967 /* images */,
+				6DDB3A1329592EB3002A8967 /* manifest.json */,
+				6DDB3A1529592EB3002A8967 /* background.js */,
+				6DDB3A1729592EB3002A8967 /* content.js */,
+				6DDB3A1929592EB3002A8967 /* popup.html */,
+				6DDB3A1B29592EB3002A8967 /* popup.css */,
+				6DDB3A1D29592EB3002A8967 /* popup.js */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6DDB39D429592EB2002A8967 /* workday-mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6DDB3A2729592EB3002A8967 /* Build configuration list for PBXNativeTarget "workday-mac" */;
+			buildPhases = (
+				6DDB39D129592EB2002A8967 /* Sources */,
+				6DDB39D229592EB2002A8967 /* Frameworks */,
+				6DDB39D329592EB2002A8967 /* Resources */,
+				6DDB3A2629592EB3002A8967 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6DDB3A0A29592EB3002A8967 /* PBXTargetDependency */,
+			);
+			name = "workday-mac";
+			productName = "workday-mac";
+			productReference = 6DDB39D529592EB2002A8967 /* workday-mac.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6DDB39F029592EB3002A8967 /* workday-macTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6DDB3A2A29592EB3002A8967 /* Build configuration list for PBXNativeTarget "workday-macTests" */;
+			buildPhases = (
+				6DDB39ED29592EB3002A8967 /* Sources */,
+				6DDB39EE29592EB3002A8967 /* Frameworks */,
+				6DDB39EF29592EB3002A8967 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6DDB39F329592EB3002A8967 /* PBXTargetDependency */,
+			);
+			name = "workday-macTests";
+			productName = "workday-macTests";
+			productReference = 6DDB39F129592EB3002A8967 /* workday-macTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6DDB39FA29592EB3002A8967 /* workday-macUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6DDB3A2D29592EB3002A8967 /* Build configuration list for PBXNativeTarget "workday-macUITests" */;
+			buildPhases = (
+				6DDB39F729592EB3002A8967 /* Sources */,
+				6DDB39F829592EB3002A8967 /* Frameworks */,
+				6DDB39F929592EB3002A8967 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6DDB39FD29592EB3002A8967 /* PBXTargetDependency */,
+			);
+			name = "workday-macUITests";
+			productName = "workday-macUITests";
+			productReference = 6DDB39FB29592EB3002A8967 /* workday-macUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		6DDB3A0629592EB3002A8967 /* workday-mac Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6DDB3A2329592EB3002A8967 /* Build configuration list for PBXNativeTarget "workday-mac Extension" */;
+			buildPhases = (
+				6DDB3A0329592EB3002A8967 /* Sources */,
+				6DDB3A0429592EB3002A8967 /* Frameworks */,
+				6DDB3A0529592EB3002A8967 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "workday-mac Extension";
+			productName = "workday-mac Extension";
+			productReference = 6DDB3A0729592EB3002A8967 /* workday-mac Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6DDB39CD29592EB2002A8967 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					6DDB39D429592EB2002A8967 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					6DDB39F029592EB3002A8967 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 6DDB39D429592EB2002A8967;
+					};
+					6DDB39FA29592EB3002A8967 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 6DDB39D429592EB2002A8967;
+					};
+					6DDB3A0629592EB3002A8967 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = 6DDB39D029592EB2002A8967 /* Build configuration list for PBXProject "workday-mac" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6DDB39CC29592EB2002A8967;
+			productRefGroup = 6DDB39D629592EB2002A8967 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6DDB39D429592EB2002A8967 /* workday-mac */,
+				6DDB39F029592EB3002A8967 /* workday-macTests */,
+				6DDB39FA29592EB3002A8967 /* workday-macUITests */,
+				6DDB3A0629592EB3002A8967 /* workday-mac Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6DDB39D329592EB2002A8967 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DDB39DF29592EB2002A8967 /* Icon.png in Resources */,
+				6DDB39E829592EB2002A8967 /* Main.storyboard in Resources */,
+				6DDB39E329592EB2002A8967 /* Script.js in Resources */,
+				6DDB39DD29592EB2002A8967 /* Main.html in Resources */,
+				6DDB39EA29592EB3002A8967 /* Assets.xcassets in Resources */,
+				6DDB39E129592EB2002A8967 /* Style.css in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6DDB39EF29592EB3002A8967 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6DDB39F929592EB3002A8967 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6DDB3A0529592EB3002A8967 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DDB3A1629592EB3002A8967 /* background.js in Resources */,
+				6DDB3A1C29592EB3002A8967 /* popup.css in Resources */,
+				6DDB3A1A29592EB3002A8967 /* popup.html in Resources */,
+				6DDB3A1229592EB3002A8967 /* images in Resources */,
+				6DDB3A1429592EB3002A8967 /* manifest.json in Resources */,
+				6DDB3A1029592EB3002A8967 /* _locales in Resources */,
+				6DDB3A1829592EB3002A8967 /* content.js in Resources */,
+				6DDB3A1E29592EB3002A8967 /* popup.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6DDB39D129592EB2002A8967 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DDB39E529592EB2002A8967 /* ViewController.swift in Sources */,
+				6DDB39D929592EB2002A8967 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6DDB39ED29592EB3002A8967 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DDB39F629592EB3002A8967 /* workday_macTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6DDB39F729592EB3002A8967 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DDB3A0229592EB3002A8967 /* workday_macUITestsLaunchTests.swift in Sources */,
+				6DDB3A0029592EB3002A8967 /* workday_macUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6DDB3A0329592EB3002A8967 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DDB3A0D29592EB3002A8967 /* SafariWebExtensionHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6DDB39F329592EB3002A8967 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6DDB39D429592EB2002A8967 /* workday-mac */;
+			targetProxy = 6DDB39F229592EB3002A8967 /* PBXContainerItemProxy */;
+		};
+		6DDB39FD29592EB3002A8967 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6DDB39D429592EB2002A8967 /* workday-mac */;
+			targetProxy = 6DDB39FC29592EB3002A8967 /* PBXContainerItemProxy */;
+		};
+		6DDB3A0A29592EB3002A8967 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6DDB3A0629592EB3002A8967 /* workday-mac Extension */;
+			targetProxy = 6DDB3A0929592EB3002A8967 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6DDB39DB29592EB2002A8967 /* Main.html */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6DDB39DC29592EB2002A8967 /* Base */,
+			);
+			name = Main.html;
+			sourceTree = "<group>";
+		};
+		6DDB39E629592EB2002A8967 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6DDB39E729592EB2002A8967 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6DDB3A2129592EB3002A8967 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6DDB3A2229592EB3002A8967 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		6DDB3A2429592EB3002A8967 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "workday-mac Extension/workday_mac_Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SCQWQB3MYR;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "workday-mac Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "workday-mac Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mybdesign.workday-mac.Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		6DDB3A2529592EB3002A8967 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "workday-mac Extension/workday_mac_Extension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SCQWQB3MYR;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "workday-mac Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "workday-mac Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mybdesign.workday-mac.Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		6DDB3A2829592EB3002A8967 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "workday-mac/workday-mac.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SCQWQB3MYR;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "workday-mac";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mybdesign.workday-mac";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		6DDB3A2929592EB3002A8967 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "workday-mac/workday-mac.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SCQWQB3MYR;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "workday-mac";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = (
+					"-framework",
+					SafariServices,
+					"-framework",
+					WebKit,
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mybdesign.workday-mac";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		6DDB3A2B29592EB3002A8967 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SCQWQB3MYR;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mybdesign.workday-macTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/workday-mac.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/workday-mac";
+			};
+			name = Debug;
+		};
+		6DDB3A2C29592EB3002A8967 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SCQWQB3MYR;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mybdesign.workday-macTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/workday-mac.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/workday-mac";
+			};
+			name = Release;
+		};
+		6DDB3A2E29592EB3002A8967 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SCQWQB3MYR;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mybdesign.workday-macUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "workday-mac";
+			};
+			name = Debug;
+		};
+		6DDB3A2F29592EB3002A8967 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SCQWQB3MYR;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mybdesign.workday-macUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "workday-mac";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6DDB39D029592EB2002A8967 /* Build configuration list for PBXProject "workday-mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6DDB3A2129592EB3002A8967 /* Debug */,
+				6DDB3A2229592EB3002A8967 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6DDB3A2329592EB3002A8967 /* Build configuration list for PBXNativeTarget "workday-mac Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6DDB3A2429592EB3002A8967 /* Debug */,
+				6DDB3A2529592EB3002A8967 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6DDB3A2729592EB3002A8967 /* Build configuration list for PBXNativeTarget "workday-mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6DDB3A2829592EB3002A8967 /* Debug */,
+				6DDB3A2929592EB3002A8967 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6DDB3A2A29592EB3002A8967 /* Build configuration list for PBXNativeTarget "workday-macTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6DDB3A2B29592EB3002A8967 /* Debug */,
+				6DDB3A2C29592EB3002A8967 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6DDB3A2D29592EB3002A8967 /* Build configuration list for PBXNativeTarget "workday-macUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6DDB3A2E29592EB3002A8967 /* Debug */,
+				6DDB3A2F29592EB3002A8967 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6DDB39CD29592EB2002A8967 /* Project object */;
+}
