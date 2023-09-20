@@ -6,6 +6,122 @@
     <script type="module" src="popup.js"></script>
 </head>
 <body>
-    <strong>Hello World!</strong>
+  <div id="main">
+    <button id="enter-time-button" tabindex=0>Enter Time</button><br />
+    <button id="open-workday-button" tabindex=0>Open workday</button><br />
+    <hr />
+    <h2>Preferences</h2>
+    <fieldset>
+      <label for="spreadsheet-id">Spreadsheet ID</label>
+      <input type="text" id="spreadsheet-id" />
+      <p class="additional">
+      Make sure the spreadsheet is shared as &quot;Anyone with the link / Viewer&quot;.
+      </p>
+    </fieldset>
+    <fieldset>
+      <label for="api-key">GCP API Key</label>
+      <input type="text" id="api-key" />
+      <p class="additional">
+      <a href="https://console.cloud.google.com/apis/library">Enable Spreadsheet API</a><br />
+      <a href="https://console.cloud.google.com/apis/credentials">Create API Key</a>
+      </p>
+    </fieldset>
+    <fieldset>
+      <table>
+        <tr>
+          <td class="label"><label for="break-start-time">Break Start Time</label></td>
+          <td class="field">
+            <select id="break-start-time">
+              <option>0:00</option>
+              <option>1:00</option>
+              <option>2:00</option>
+              <option>3:00</option>
+              <option>4:00</option>
+              <option>5:00</option>
+              <option>6:00</option>
+              <option>7:00</option>
+              <option>8:00</option>
+              <option>9:00</option>
+              <option>10:00</option>
+              <option>11:00</option>
+              <option>12:00</option>
+              <option>13:00</option>
+              <option>14:00</option>
+              <option>15:00</option>
+              <option>16:00</option>
+              <option>17:00</option>
+              <option>18:00</option>
+              <option>19:00</option>
+              <option>20:00</option>
+              <option>21:00</option>
+              <option>22:00</option>
+              <option>23:00</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td class="label"><label for="break-end-time">Break End Time</label></td>
+          <td class="field">
+            <select id="break-end-time">
+              <option>0:00</option>
+              <option>1:00</option>
+              <option>2:00</option>
+              <option>3:00</option>
+              <option>4:00</option>
+              <option>5:00</option>
+              <option>6:00</option>
+              <option>7:00</option>
+              <option>8:00</option>
+              <option>9:00</option>
+              <option>10:00</option>
+              <option>11:00</option>
+              <option>12:00</option>
+              <option>13:00</option>
+              <option>14:00</option>
+              <option>15:00</option>
+              <option>16:00</option>
+              <option>17:00</option>
+              <option>18:00</option>
+              <option>19:00</option>
+              <option>20:00</option>
+              <option>21:00</option>
+              <option>22:00</option>
+              <option>23:00</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td class="label"><label for="waiting-time-adjustment">Waiting Time Adj.</label></td>
+          <td class="field">
+            <select id="waiting-time-adjustment">
+              <option>-1000</option>
+              <option>-900</option>
+              <option>-800</option>
+              <option>-700</option>
+              <option>-600</option>
+              <option>-500</option>
+              <option>-400</option>
+              <option>-300</option>
+              <option>-200</option>
+              <option>-100</option>
+              <option>0</option>
+              <option>+100</option>
+              <option>+200</option>
+              <option>+300</option>
+              <option>+400</option>
+              <option>+500</option>
+              <option>+600</option>
+              <option>+700</option>
+              <option>+800</option>
+              <option>+900</option>
+              <option>+1000</option>
+            </select>
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+  </div>
+  <div id="loading">
+  </div>
 </body>
 </html>

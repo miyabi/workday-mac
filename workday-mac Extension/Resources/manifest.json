@@ -20,7 +20,7 @@
 
     "content_scripts": [{
         "js": [ "content.js" ],
-        "matches": [ "*://example.com/*" ]
+        "matches": [ "*://www.myworkday.com/*" ]
     }],
 
     "action": {
@@ -35,5 +35,5 @@
         }
     },
 
-    "permissions": [ ]
+    "permissions": [ "storage" ]
 }

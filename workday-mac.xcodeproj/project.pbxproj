@@ -69,7 +69,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		6DDB39D529592EB2002A8967 /* workday-mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "workday-mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6DDB39D529592EB2002A8967 /* Workday Time Entry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Workday Time Entry.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DDB39D829592EB2002A8967 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6DDB39DC29592EB2002A8967 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = ../Base.lproj/Main.html; sourceTree = "<group>"; };
 		6DDB39DE29592EB2002A8967 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
@@ -145,7 +145,7 @@
 		6DDB39D629592EB2002A8967 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6DDB39D529592EB2002A8967 /* workday-mac.app */,
+				6DDB39D529592EB2002A8967 /* Workday Time Entry.app */,
 				6DDB39F129592EB3002A8967 /* workday-macTests.xctest */,
 				6DDB39FB29592EB3002A8967 /* workday-macUITests.xctest */,
 				6DDB3A0729592EB3002A8967 /* workday-mac Extension.appex */,
@@ -240,7 +240,7 @@
 			);
 			name = "workday-mac";
 			productName = "workday-mac";
-			productReference = 6DDB39D529592EB2002A8967 /* workday-mac.app */;
+			productReference = 6DDB39D529592EB2002A8967 /* Workday Time Entry.app */;
 			productType = "com.apple.product-type.application";
 		};
 		6DDB39F029592EB3002A8967 /* workday-macTests */ = {
@@ -586,7 +586,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "workday-mac Extension/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "workday-mac Extension";
+				INFOPLIST_KEY_CFBundleDisplayName = "Workday Time Entry Extension";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -617,7 +617,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "workday-mac Extension/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "workday-mac Extension";
+				INFOPLIST_KEY_CFBundleDisplayName = "Workday Time Entry Extension";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -651,7 +651,7 @@
 				DEVELOPMENT_TEAM = SCQWQB3MYR;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "workday-mac";
+				INFOPLIST_KEY_CFBundleDisplayName = "Workday Time Entry";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -668,7 +668,7 @@
 					WebKit,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mybdesign.workday-mac";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Workday Time Entry";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -687,7 +687,7 @@
 				DEVELOPMENT_TEAM = SCQWQB3MYR;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_CFBundleDisplayName = "workday-mac";
+				INFOPLIST_KEY_CFBundleDisplayName = "Workday Time Entry";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -704,7 +704,7 @@
 					WebKit,
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mybdesign.workday-mac";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Workday Time Entry";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
