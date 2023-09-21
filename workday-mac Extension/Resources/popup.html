@@ -12,7 +12,14 @@
     <hr />
     <h2>Preferences</h2>
     <fieldset>
-      <label for="spreadsheet-id">Spreadsheet ID</label>
+      <div class="row-layout">
+        <label for="spreadsheet-id">Spreadsheet ID</label>
+        <button id="open-spreadsheet-button">
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="13" height="13">
+            <use href="images/arrow.up.right.square.svg#arrow-up-right-square" />
+          </svg>
+        </button>
+      </div>
       <input type="text" id="spreadsheet-id" />
       <p class="additional">
       Make sure the spreadsheet is shared as &quot;Anyone with the link / Viewer&quot;.

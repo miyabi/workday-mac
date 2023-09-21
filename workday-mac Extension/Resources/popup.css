@@ -44,6 +44,17 @@ button#open-workday-button {
   margin-top: 12px;
 }
 
+button#open-spreadsheet-button {
+  margin: 0px;
+  padding: 0px;
+  background: none;
+  border: none;
+}
+
+button#open-spreadsheet-button svg.icon {
+  color: system-ui;
+}
+
 fieldset {
   border: none;
   margin: 10px 0px 0px;
@@ -67,4 +78,5 @@ div.row-layout {
   margin-top: 4px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }

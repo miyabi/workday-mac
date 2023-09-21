@@ -30,6 +30,10 @@
   function getWaitingTimeAdjustmentElement() {
     return document.getElementById('waiting-time-adjustment');
   }
+  
+  function getOpenSpreadsheetButton() {
+    return document.getElementById('open-spreadsheet-button');
+  }
 
   function displayMainContent() {
     getMainContentElement().style.display = 'block';
@@ -72,6 +76,7 @@
 
     document.getElementById('enter-time-button').addEventListener('click', onEnterTimeButtonClicked);
     document.getElementById('open-workday-button').addEventListener('click', onOpenWorkdayButtonClicked);
+    getOpenSpreadsheetButton().addEventListener('click', onOpenSpreadsheetButtonClicked);
   }
   
   async function getActiveTab() {
@@ -80,7 +85,9 @@
   }
   
   async function onSpreadsheetIdChanged(e) {
-    await browser.storage.local.set({spreadsheetId: e.target.value});
+    const spreadsheetId = e.target.value;
+    getOpenSpreadsheetButton().disabled = (spreadsheetId === '');
+    await browser.storage.local.set({spreadsheetId});
   }
   
   async function onApiKeyChanged(e) {
@@ -129,6 +136,11 @@
   
   function onOpenWorkdayButtonClicked() {
     browser.tabs.create({url: config.workdayUrl});
+  }
+  
+  function onOpenSpreadsheetButtonClicked() {
+    const spreadsheetId = getSpreadsheetIdElement().value;
+    browser.tabs.create({url: `https://docs.google.com/spreadsheets/d/${spreadsheetId}`});
   }
   
   document.addEventListener('DOMContentLoaded', () => {
