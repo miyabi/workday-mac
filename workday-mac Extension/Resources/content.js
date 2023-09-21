@@ -9,6 +9,27 @@
     okButtonSelector: 'button[title=OK]',
     waitingTimeUntilPopupOpens: 3000,
     waitingTimeUntilSubmissionCompletes: 4000,
+    updatingMessagePrefixes: [
+      '&#x2615;',  // ☕
+      '&#x1F32D;', // 🌭
+      '&#x1F32E;', // 🌮
+      '&#x1F32F;', // 🌯
+      '&#x1F354;', // 🍔
+      '&#x1F355;', // 🍕
+      '&#x1F359;', // 🍙
+      '&#x1F369;', // 🍩
+      '&#x1F36A;', // 🍪
+      '&#x1F370;', // 🍰
+      '&#x1F375;', // 🍵
+      '&#x1F379;', // 🍹
+      '&#x1F37A;', // 🍺
+      '&#x1F95E;', // 🥞
+      '&#x1F964;', // 🥤
+      '&#x1F9C1;', // 🧁
+      '&#x1F9C9;', // 🧉
+      '&#x1F9CB;', // 🧋
+      '&#x1FAD6;', // 🫖
+    ],
   };
   
   const mouseDownEvent = new MouseEvent('mousedown', { view: window, bubbles: true });
@@ -28,6 +49,10 @@
   
   function timeToNumber(time) {
     return parseInt(time.replace(':', ''));
+  }
+  
+  function randomUpdatingMessagePrefix() {
+    return config.updatingMessagePrefixes[Math.floor(Math.random() * (config.updatingMessagePrefixes.length - 1))];
   }
   
   function getDateRange() {
@@ -144,7 +169,8 @@
   
   async function enterAndSubmitTimeForDay(day, inTime, outTime, waitingTimeAdjustment) {
     try {
-      onUpdate(true, `Entering time...<br />Day: ${day} In: ${inTime} Out: ${outTime}`);
+      const prefix = randomUpdatingMessagePrefix();
+      onUpdate(true, `${prefix} Entering time...<br />Day: ${day} In: ${inTime} Out: ${outTime}`);
 
       var cells = getCells(getCalendar());
       clickCell(cells[day]);
