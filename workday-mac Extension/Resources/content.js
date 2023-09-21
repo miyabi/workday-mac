@@ -125,11 +125,16 @@
   
   function getTimeData(data) {
     try {
-      return data.values.map((cell) => ({
-        day: cell[0],
-        startTime: cell[2],
-        endTime: cell[3],
-      }));
+      const dayRegexp = /^\d+$/;
+      const timeRegexp = /^\d{1,2}:\d{2}$/;
+      
+      return data.values.reduce((accumulator, row) => {
+        const [day, , startTime, endTime] = row;
+        if (dayRegexp.exec(day) !== null && timeRegexp.exec(startTime) !== null && timeRegexp.exec(endTime) !== null) {
+          accumulator.push({day, startTime, endTime});
+        }
+        return accumulator;
+      }, []);
     } catch (e) {
       console.log(e);
       window.alert('Failed to extract time data.');
