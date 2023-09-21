@@ -3,7 +3,7 @@
 }
 
 body {
-  width: 200px;
+  width: 224px;
   padding: 8px;
 
   font-family: system-ui;
@@ -63,22 +63,8 @@ input {
   font-size: .8em;
 }
 
-.row-layout {
-  
-}
-
-.row-layout div {
-  display: inline;
-}
-
-table {
-  width: 100%;
-}
-
-td.label {
-  white-space: nowrap;
-}
-
-td.field {
-  text-align: right;
+div.row-layout {
+  margin-top: 4px;
+  display: flex;
+  justify-content: space-between;
 }
