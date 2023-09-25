@@ -15,8 +15,8 @@
     return document.getElementById('spreadsheet-id');
   }
   
-  function getApiKeyElement() {
-    return document.getElementById('api-key');
+  function getWebAppUrlElement() {
+    return document.getElementById('web-app-url');
   }
   
   function getBreakStartTimeElement() {
@@ -48,7 +48,7 @@
   async function initialize() {
     const values = await browser.storage.local.get({
       spreadsheetId: '',
-      apiKey: '',
+      webAppUrl: '',
       breakStartTime: '12:00',
       breakEndTime: '13:00',
       waitingTimeAdjustment: '0',
@@ -58,9 +58,9 @@
     spreadsheetIdElement.value = values.spreadsheetId;
     spreadsheetIdElement.addEventListener('change', onSpreadsheetIdChanged);
     
-    const apiKeyElement= getApiKeyElement();
-    apiKeyElement.value = values.apiKey;
-    apiKeyElement.addEventListener('change', onApiKeyChanged);
+    const webAppUrlElement = getWebAppUrlElement();
+    webAppUrlElement.value = values.webAppUrl;
+    webAppUrlElement.addEventListener('change', onWebAppUrlChanged);
     
     const breakStartTimeElement = getBreakStartTimeElement();
     breakStartTimeElement.value = values.breakStartTime;
@@ -90,8 +90,8 @@
     await browser.storage.local.set({spreadsheetId});
   }
   
-  async function onApiKeyChanged(e) {
-    await browser.storage.local.set({apiKey: e.target.value});
+  async function onWebAppUrlChanged(e) {
+    await browser.storage.local.set({webAppUrl: e.target.value});
   }
   
   async function onBreakStartTimeChanged(e) {
@@ -118,7 +118,7 @@
   
   async function onEnterTimeButtonClicked(e) {
     const spreadsheetId = getSpreadsheetIdElement().value;
-    const apiKey = getApiKeyElement().value;
+    const webAppUrl = getWebAppUrlElement().value;
     const breakStartTime = getBreakStartTimeElement().value;
     const breakEndTime = getBreakEndTimeElement().value;
     const waitingTimeAdjustment = getWaitingTimeAdjustmentElement().value;
@@ -127,7 +127,7 @@
     browser.tabs.sendMessage(activeTab.id, {
       type: 'onEnterTimeButtonClicked',
       spreadsheetId,
-      apiKey,
+      webAppUrl,
       breakStartTime,
       breakEndTime,
       waitingTimeAdjustment,

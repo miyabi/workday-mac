@@ -127,9 +127,9 @@
     }
   }
 
-  async function fetchSpreadsheetContents(spreadsheetId, sheetName, apiKey) {
+  async function fetchSpreadsheetContents(webAppUrl, spreadsheetId, year, month) {
     try {
-      const url = `https://sheets.googleapis.com/v4/spreadsheets/${spreadsheetId}/values/${sheetName}?key=${apiKey}`;
+      const url = `${webAppUrl}?mode=get&spreadsheetId=${spreadsheetId}&year=${year}&month=${month}`
       const response = await fetch(url);
       const data = await response.json();
 
@@ -185,16 +185,21 @@
     }
   }
 
-  async function fetchAndEnterTime(spreadsheetId, apiKey, breakStartTime, breakEndTime, waitingTimeAdjustment) {
-    const sheetName = getSheetName();
-    if (sheetName === null) {
+  async function fetchAndEnterTime(webAppUrl, spreadsheetId, breakStartTime, breakEndTime, waitingTimeAdjustment) {
+    let year, month;
+
+    try {
+      [year, month] = getYearAndMonth(getDateRange());
+    } catch (e) {
+      console.log(e);
       onUpdate(false);
+      window.alert('Go to Entry Time page.');
       return;
     }
 
     onUpdate(true, 'Fetching data from spreadsheet...');
     
-    const data = await fetchSpreadsheetContents(spreadsheetId, encodeURIComponent(sheetName), apiKey);
+    const data = await fetchSpreadsheetContents(webAppUrl, spreadsheetId, year, month);
     if (data === null) {
       onUpdate(false);
       return;
@@ -233,8 +238,8 @@
   
   browser.runtime.onMessage.addListener((request, sender, sendResponse) => {
     if (request.type === "onEnterTimeButtonClicked") {
-      const {spreadsheetId, apiKey, breakStartTime, breakEndTime, waitingTimeAdjustment} = request;
-      fetchAndEnterTime(spreadsheetId, apiKey, breakStartTime, breakEndTime, parseInt(waitingTimeAdjustment));
+      const {webAppUrl, spreadsheetId, breakStartTime, breakEndTime, waitingTimeAdjustment} = request;
+      fetchAndEnterTime(webAppUrl, spreadsheetId, breakStartTime, breakEndTime, parseInt(waitingTimeAdjustment));
       return;
     }
   });
