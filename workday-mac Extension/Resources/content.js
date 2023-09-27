@@ -12,8 +12,8 @@
     popupSelector: 'div.WCU[role=dialog]',
     inputSelector: 'input[type=text]',
     okButtonSelector: 'button[title=OK]',
-    waitingTimeUntilPopupOpens: 3000,
-    waitingTimeUntilSubmissionCompletes: 4000,
+    waitingTimeUntilPopupOpens: 3500,
+    waitingTimeUntilSubmissionCompletes: 3500,
     updatingMessagePrefixes: [
       '&#x2615;',  // ☕
       '&#x1F32D;', // 🌭
