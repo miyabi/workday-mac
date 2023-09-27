@@ -116,11 +116,25 @@
   
   function enterAndSubmitTime(inTime, outTime) {
     const popup = getPopup();
+    if (!popup) {
+      return false;
+    }
+
     const [inInput, outInput] = getInputs(popup);
+    if (!inInput || !outInput) {
+      return false;
+    }
+
     enterTime(inInput, inTime);
     enterTime(outInput, outTime);
+
     const okButton = getOkButton(popup);
+    if (!okButton) {
+      return false;
+    }
+
     okButton.click();
+    return true;
   }
   
   function getSheetName() {
@@ -177,18 +191,23 @@
   async function enterAndSubmitTimeForDay(day, inTime, outTime, waitingTimeAdjustment) {
     try {
       const prefix = randomUpdatingMessagePrefix();
-      onUpdate(true, `${prefix} Entering time...<br />Day: ${day} In: ${inTime} Out: ${outTime}`);
+      const progress = `Day:${day} In:${inTime} Out:${outTime}`;
+      onUpdate(true, `${prefix} Entering time...<br />${progress}`);
 
       var cells = getCells(getCalendar());
-      clickCell(cells[day]);
-      await wait(config.waitingTimeUntilPopupOpens + waitingTimeAdjustment);
-      enterAndSubmitTime(inTime, outTime);
-      await wait(config.waitingTimeUntilSubmissionCompletes + waitingTimeAdjustment);
-      return true;
+      if (cells[day]) {
+        clickCell(cells[day]);
+        await wait(config.waitingTimeUntilPopupOpens + waitingTimeAdjustment);
+        if (enterAndSubmitTime(inTime, outTime)) {
+          await wait(config.waitingTimeUntilSubmissionCompletes + waitingTimeAdjustment);
+          return [true];
+        }
+      }
+
+      return [false, progress];
     } catch (e) {
       console.log(e);
-      window.alert(`Failed to enter time.\nday=${day} in=${inTime} out=${outTime}`);
-      return false;
+      return [false, progress];
     }
   }
 
@@ -218,33 +237,47 @@
       return;
     }
     
+    const errors = [];
+    
     for (var i=0; i<timeData.length; i++) {
       const {day, startTime, endTime} = timeData[i];
 
       if (timeToNumber(startTime) < timeToNumber(breakStartTime) &&
           timeToNumber(endTime) > timeToNumber(breakEndTime)) {
-        if (!await enterAndSubmitTimeForDay(day, startTime, breakStartTime, waitingTimeAdjustment)) {
-          // Failed, so exit loop
-          break;
+        let [success, error] = await enterAndSubmitTimeForDay(day, startTime, breakStartTime, waitingTimeAdjustment);
+        if (error !== undefined) {
+          // Failed
+          errors.push(error);
         }
   
-        if (!await enterAndSubmitTimeForDay(day, breakEndTime, endTime, waitingTimeAdjustment)) {
-          // Failed, so exit loop
-          break;
+        [success, error] = await enterAndSubmitTimeForDay(day, breakEndTime, endTime, waitingTimeAdjustment);
+        if (error !== undefined) {
+          // Failed
+          errors.push(error);
         }
       } else {
-        if (!await enterAndSubmitTimeForDay(day, startTime, endTime, waitingTimeAdjustment)) {
-          // Failed, so exit loop
-          break;
+        const [success, error] = await enterAndSubmitTimeForDay(day, startTime, endTime, waitingTimeAdjustment);
+        if (error !== undefined) {
+          // Failed
+          errors.push(error);
         }
       }
     }
-
+    
     onUpdate(false);
+
+    let message;
+    if (errors.length === 0) {
+      message = '✅ Complete!';
+    } else {
+      const combinedErrors = errors.join('\n');
+      message = `⚠️ Could not enter for some days.\n${combinedErrors}`;
+    }
+    window.alert(message);
   }
   
   browser.runtime.onMessage.addListener(async (request, sender, sendResponse) => {
-    if (request.type === "onEnterTimeButtonClicked") {
+    if (request.type === 'onEnterTimeButtonClicked') {
       const {webAppUrl, spreadsheetId, breakStartTime, breakEndTime, waitingTimeAdjustment} = request;
       await fetchAndEnterTime(webAppUrl, spreadsheetId, breakStartTime, breakEndTime, parseInt(waitingTimeAdjustment));
       return true;
