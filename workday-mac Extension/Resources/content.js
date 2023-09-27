@@ -250,7 +250,7 @@
       return true;
     }
     
-    console.log(`Invalid request: ${request} ${sender}`);
-    return false;
+    console.log(`Unknown request: ${request} ${sender}`);
+    return true;
   });
 }) ();
