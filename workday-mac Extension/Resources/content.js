@@ -1,4 +1,8 @@
 (() => {
+  if (navigator.userAgent.indexOf('Chrome') >= 0) {
+    window.browser = window.chrome;
+  }
+
   const config = {
     dateRangeSelector: 'h2.WJIE',
     calendarSelector: 'div.WG13[role=application]',
@@ -34,6 +38,8 @@
   
   const mouseDownEvent = new MouseEvent('mousedown', { view: window, bubbles: true });
   const mouseUpEvent = new MouseEvent('mouseup', { view: window, bubbles: true });
+  const focusEvent = new Event('focus');
+  const blurEvent = new Event('blur');
   
   function onUpdate(busy, message) {
     browser.runtime.sendMessage({type: 'onUpdate', busy, message});
@@ -102,9 +108,9 @@
   }
   
   function enterTime(input, time) {
-    input.focus();
+    input.dispatchEvent(focusEvent);
     input.value = time;
-    input.blur();
+    input.dispatchEvent(blurEvent);
   }
   
   function enterAndSubmitTime(inTime, outTime) {

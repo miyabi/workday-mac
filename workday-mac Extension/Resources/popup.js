@@ -1,4 +1,8 @@
 (() => {
+  if (navigator.userAgent.indexOf('Chrome') >= 0) {
+    window.browser = window.chrome;
+  }
+
   const config = {
     workdayUrl: 'https://www.myworkday.com/unitytech/d/home.htmld',
   };
