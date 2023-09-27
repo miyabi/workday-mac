@@ -1,5 +1,6 @@
 (() => {
-  if (navigator.userAgent.indexOf('Chrome') >= 0) {
+  const isChrome = (navigator.userAgent.indexOf('Chrome') >= 0);
+  if (isChrome) {
     window.browser = window.chrome;
   }
 
