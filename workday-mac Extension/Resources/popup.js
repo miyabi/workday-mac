@@ -135,6 +135,8 @@
       breakStartTime,
       breakEndTime,
       waitingTimeAdjustment,
+    }).catch((e) => {
+      console.log(e);
     });
   }
   
@@ -155,6 +157,10 @@
     if (request.type === 'onUpdate') {
       const {busy, message} = request;
       onUpdate(busy, message);
+      return true;
     }
+    
+    console.log(`Invalid request: ${request} ${sender}`);
+    return false;
   });
 }) ();

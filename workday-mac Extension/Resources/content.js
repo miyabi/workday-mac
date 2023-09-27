@@ -242,11 +242,14 @@
     onUpdate(false);
   }
   
-  browser.runtime.onMessage.addListener((request, sender, sendResponse) => {
+  browser.runtime.onMessage.addListener(async (request, sender, sendResponse) => {
     if (request.type === "onEnterTimeButtonClicked") {
       const {webAppUrl, spreadsheetId, breakStartTime, breakEndTime, waitingTimeAdjustment} = request;
-      fetchAndEnterTime(webAppUrl, spreadsheetId, breakStartTime, breakEndTime, parseInt(waitingTimeAdjustment));
-      return;
+      await fetchAndEnterTime(webAppUrl, spreadsheetId, breakStartTime, breakEndTime, parseInt(waitingTimeAdjustment));
+      return true;
     }
+    
+    console.log(`Invalid request: ${request} ${sender}`);
+    return false;
   });
 }) ();
