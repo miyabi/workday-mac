@@ -9,12 +9,12 @@
   if (isChrome || isFirefox) {
     browser.action.setIcon({
       path: {
-        "16": "images/toolbar-icon-16-colored.png",
-        "19": "images/toolbar-icon-19-colored.png",
-        "32": "images/toolbar-icon-32-colored.png",
-        "38": "images/toolbar-icon-38-colored.png",
-        "48": "images/toolbar-icon-48-colored.png",
-        "72": "images/toolbar-icon-72-colored.png"
+        '16': 'images/toolbar-icon-16-colored.png',
+        '19': 'images/toolbar-icon-19-colored.png',
+        '32': 'images/toolbar-icon-32-colored.png',
+        '38': 'images/toolbar-icon-38-colored.png',
+        '48': 'images/toolbar-icon-48-colored.png',
+        '72': 'images/toolbar-icon-72-colored.png',
       },
     });
   }
