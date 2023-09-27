@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6D9D3E262AC478060039106A /* manifest-firefox.json in Resources */ = {isa = PBXBuildFile; fileRef = 6D9D3E252AC478060039106A /* manifest-firefox.json */; };
 		6DDB39D929592EB2002A8967 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DDB39D829592EB2002A8967 /* AppDelegate.swift */; };
 		6DDB39DD29592EB2002A8967 /* Main.html in Resources */ = {isa = PBXBuildFile; fileRef = 6DDB39DB29592EB2002A8967 /* Main.html */; };
 		6DDB39DF29592EB2002A8967 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6DDB39DE29592EB2002A8967 /* Icon.png */; };
@@ -69,6 +70,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6D9D3E252AC478060039106A /* manifest-firefox.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "manifest-firefox.json"; sourceTree = "<group>"; };
 		6DDB39D529592EB2002A8967 /* Workday Time Entry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Workday Time Entry.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DDB39D829592EB2002A8967 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6DDB39DC29592EB2002A8967 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = Base; path = ../Base.lproj/Main.html; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 				6DDB3A1929592EB3002A8967 /* popup.html */,
 				6DDB3A1B29592EB3002A8967 /* popup.css */,
 				6DDB3A1D29592EB3002A8967 /* popup.js */,
+				6D9D3E252AC478060039106A /* manifest-firefox.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6DDB3A1629592EB3002A8967 /* background.js in Resources */,
+				6D9D3E262AC478060039106A /* manifest-firefox.json in Resources */,
 				6DDB3A1C29592EB3002A8967 /* popup.css in Resources */,
 				6DDB3A1A29592EB3002A8967 /* popup.html in Resources */,
 				6DDB3A1229592EB3002A8967 /* images in Resources */,

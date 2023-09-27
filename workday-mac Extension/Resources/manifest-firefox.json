@@ -15,7 +15,7 @@
     },
 
     "background": {
-        "service_worker": "background.js"
+        "scripts": ["background.js"]
     },
 
     "content_scripts": [{
@@ -35,5 +35,11 @@
         }
     },
 
-    "permissions": [ "storage" ]
+    "permissions": [ "storage" ],
+    
+    "browser_specific_settings": {
+      "gecko": {
+        "id": "workday-time-entry@mybdesign.com"
+      }
+    }
 }
