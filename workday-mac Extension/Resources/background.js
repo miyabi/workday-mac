@@ -1,10 +1,12 @@
 (() => {
   const isChrome = (navigator.userAgent.indexOf('Chrome') >= 0);
+  const isFirefox = (navigator.userAgent.indexOf('Firefox') >= 0);
+
   if (isChrome) {
     browser = chrome;
   }
   
-  if (isChrome) {
+  if (isChrome || isFirefox) {
     browser.action.setIcon({
       path: {
         "16": "images/toolbar-icon-16-colored.png",
