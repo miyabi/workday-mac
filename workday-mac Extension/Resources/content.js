@@ -5,11 +5,11 @@
   }
 
   const config = {
-    dateRangeSelector: 'h2.WJIE',
-    calendarSelector: 'div.WG13[role=application]',
+    dateRangeSelector: 'h2[data-automation-id=dateRangeTitle]',
+    calendarSelector: 'div[role=application][aria-label=Calendar]',
     cellSelector: 'div[role=cell]',
     cellPattern: '^calendarDateCell-(\\d+)-(\\d+)$',
-    popupSelector: 'div.WCU[role=dialog]',
+    popupSelector: 'div[role=dialog][data-automation-id=popUpDialog]',
     inputSelector: 'input[type=text]',
     okButtonSelector: 'button[title=OK]',
     waitingTimeUntilPopupOpens: 3500,
@@ -271,7 +271,7 @@
       message = '✅ Complete!';
     } else {
       const combinedErrors = errors.join('\n');
-      message = `⚠️ Could not enter for some days.\n${combinedErrors}`;
+      message = `⚠️ Could not enter time for some days.\n${combinedErrors}`;
     }
     window.alert(message);
   }
