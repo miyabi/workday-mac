@@ -5,7 +5,7 @@
   }
 
   const config = {
-    dateRangeSelector: 'h2[data-automation-id=dateRangeTitle]',
+    dateRangeSelector: 'div[data-automation-visiblerangeinterval=MONTH]',
     calendarSelector: 'div[role=application][aria-label=Calendar]',
     cellSelector: 'div[role=cell]',
     cellPattern: '^calendarDateCell-(\\d+)-(\\d+)$',
@@ -63,12 +63,25 @@
   }
   
   function getDateRange() {
-    return document.querySelector(config.dateRangeSelector).textContent;
+    const element = document.querySelector(config.dateRangeSelector);
+    if (!element) {
+      return null;
+    }
+    
+    const value = parseInt(element.getAttribute('data-automation-visiblerangestartdate'));
+    if (isNaN(value)) {
+      return null;
+    }
+    
+    const date = new Date(value);
+    if (date.getDate() === 1) {
+      return date;
+    }
+    
+    return new Date(value + 24*60*60*1000);
   }
   
-  function getYearAndMonth(dateRange) {
-    const [month, year] = dateRange.split(' ');
-    const date = new Date(`1 ${month}, ${year}`);
+  function getYearAndMonth(date) {
     return [date.getFullYear(), date.getMonth() + 1];
   }
   
