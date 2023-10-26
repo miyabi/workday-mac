@@ -137,9 +137,19 @@
     if (!inInput || !outInput) {
       return false;
     }
+    
+    let inSuffix = '';
+    if (timeToNumber(inTime) < 1200) {
+      inSuffix = 'AM';
+    }
 
-    enterTime(inInput, inTime);
-    enterTime(outInput, outTime);
+    let outSuffix = '';
+    if (timeToNumber(outTime) < 1200) {
+      outSuffix = 'AM';
+    }
+
+    enterTime(inInput, `${inTime}${inSuffix}`);
+    enterTime(outInput, `${outTime}${outSuffix}`);
 
     const okButton = getOkButton(popup);
     if (!okButton) {
