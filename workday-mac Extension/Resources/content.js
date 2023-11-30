@@ -78,7 +78,7 @@
       return date;
     }
     
-    return new Date(value + 24*60*60*1000);
+    return new Date(value + 7*24*60*60*1000);
   }
   
   function getYearAndMonth(date) {
